@@ -1,0 +1,110 @@
+/*importa una fuente de google (Poppins)*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,500&display=swap');
+
+/*Pone un margen y padding de 0 a todo el documento, también aplica un box sizing: border box para que no sea afectado por otros margenes*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Para la etiquta "body", cambia la fuente de letra a Poppins, sans-serif*/
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/*Para la clase "container", se aplica un ancho del 90% con un maximo de 1200px, establece un margen de 0 y un overflow para que todo lo que salga de los elementos se esconda y
+no se desborde.*/
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*Para la clase "nav", establece un color de fondo, una altura calculada y color de fuente blanco*/
+.nav {
+    background-color: #143d64;
+    height: var(--height-nav);
+    color: #fff;
+}
+
+/*Para la clase "nav_container", establece altura del 100%, */
+.nav_container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.hero_main {
+    display: flex;
+    height: calc(100vh - var(--height-nav));
+    align-items: center;
+    min-height: 600px;
+}
+
+.hero_img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero_title {
+    font-size: 3rem;
+}
+
+.hero_paragrah {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.cta {
+    background-color: #6c63ff;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    border: 6px;
+}
+
+@media screen and (max-width:900px){
+    :root {
+        --height-nav:100px;
+    }    
+    .nav_container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .hero_main {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .figure_picture {
+        order: -1;
+        max-width: 380px;
+    }
+    .hero_texts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .hero_title {
+        font-size: 2.5rem;
+    }
+    .hero_paragrah {
+        font-size: 1rem;
+    }
+    .cta {
+        margin: auto;
+    }
+}
